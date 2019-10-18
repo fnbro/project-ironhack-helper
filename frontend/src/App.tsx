@@ -2,8 +2,9 @@ import React from 'react';
 import NavBar from './components/NavBar';
 import Login from './components/Login';
 import Register from './components/Register';
+import ShowAssets from './components/ShowAssets';
+import WeeklyFeedback from './components/WeeklyFeedback'
 import Startpage from './components/Home'
-// import ShowAssets from './components/ShowAssets';
 import { Switch, Route } from 'react-router-dom';
 import { IAction, ActionType } from './framework/IAction';
 import { IAssetData, IState } from './state/appState'
@@ -53,6 +54,7 @@ export default class App extends React.PureComponent<IProps> {
       <>
         <NavBar />
         <Switch>
+          <Route path="/feedback" component={WeeklyFeedback} />
           <Route exact path="/" component={Startpage} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />

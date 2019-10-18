@@ -112,6 +112,7 @@ export default class SimpleAsset extends React.PureComponent<IProps, IJSXState> 
     handleSave(event: any) {
         this.setState({ edit_mode: false });
     }
+    
     handleDelete() {
         const action: IAssetAction = {
             type: ActionType.delete_asset,
